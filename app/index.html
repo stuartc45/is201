@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monopoly Deal (Simple Web App)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="header">
+        <div>
+          <h1>Monopoly Deal</h1>
+          <p class="subtitle">Simple local web app</p>
+        </div>
+        <div class="status" id="gameStatus"></div>
+      </header>
+
+      <section id="setup" class="panel">
+        <h2>Setup</h2>
+        <div class="row">
+          <label for="playerCount">Players</label>
+          <select id="playerCount">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div id="playerInputs" class="player-inputs"></div>
+        <button id="startGame" class="primary">Start Game</button>
+      </section>
+
+      <section id="game" class="panel hidden">
+        <div class="turn-bar">
+          <div class="turn-info" id="turnInfo"></div>
+          <div class="turn-actions">
+            <button id="drawBtn">Draw 2</button>
+            <button id="endTurnBtn">End Turn</button>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="column" id="playersArea"></div>
+          <div class="column side">
+            <div class="pile">
+              <h3>Deck</h3>
+              <div id="deckCount" class="count"></div>
+              <button id="peekDeck">Peek Top 5</button>
+              <div id="deckPeek" class="peek"></div>
+            </div>
+            <div class="pile">
+              <h3>Discard</h3>
+              <div id="discardCount" class="count"></div>
+              <div id="discardTop" class="peek"></div>
+            </div>
+            <div class="pile">
+              <h3>Action Log</h3>
+              <div id="log" class="log"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="modal" class="modal hidden">
+        <div class="modal-content">
+          <h3 id="modalTitle"></h3>
+          <div id="modalBody"></div>
+          <div class="modal-actions">
+            <button id="modalCancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
