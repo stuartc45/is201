@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stuart's gallery</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html">Portfolio</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="aboutme.html">About Me</a>
+    </nav>
+    <header>
+      <h1>Stuart's Photo Gallery</h1>
+    </header>
+    <main class="gallery-page">
+      <div class="carousel" aria-label="Photo carousel">
+        <div class="carousel-track">
+          <img
+            src="https://media.wired.com/photos/69cdc8b72391edcacfeb9147/3:2/w_2560%2Cc_limit/2269453122"
+            alt="Space photo 1"
+            class="carousel-image active"
+          />
+          <img
+            src="https://static01.nyt.com/images/2022/12/11/multimedia/11nasa-live-moon-view-1-6074/11nasa-live-moon-view-1-6074-superJumbo.jpg"
+            alt="Space photo 2"
+            class="carousel-image"
+          />
+          <img
+            src="https://ca-times.brightspotcdn.com/dims4/default/7145a15/2147483647/strip/true/crop/1920x1280+0+0/resize/2000x1333!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fd8%2F00%2Fe24b8bac4ee1abcf87bbf1ff1dca%2Fart002e009301-large.jpg"
+            alt="Space photo 3"
+            class="carousel-image"
+          />
+          <img
+            src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2026-04/260403-artemis-ii-earth-ew-320p-ae5928.jpg"
+            alt="Space photo 4"
+            class="carousel-image"
+          />
+          <img
+            src="https://static.scientificamerican.com/dam/asset/6a3d0d5d-b962-4fd6-94b4-31ea57aa4b70/55192123432_63d8824722_k.jpg?m=1775574468.132&w=600"
+            alt="Space photo 5"
+            class="carousel-image"
+          />
+        </div>
+        <button
+          class="carousel-button carousel-button--prev"
+          type="button"
+          aria-label="Previous photo"
+        >
+          ‹
+        </button>
+        <button
+          class="carousel-button carousel-button--next"
+          type="button"
+          aria-label="Next photo"
+        >
+          ›
+        </button>
+        <div class="carousel-indicators" aria-label="Carousel navigation"></div>
+      </div>
+      <p>Use the arrows or indicators to move through the gallery.</p>
+    </main>
+    <footer>
+      <p>&copy; 2026 Stuart's Portfolio</p>
+    </footer>
+
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(track.querySelectorAll(".carousel-image"));
+      const prevButton = document.querySelector(".carousel-button--prev");
+      const nextButton = document.querySelector(".carousel-button--next");
+      const indicators = document.querySelector(".carousel-indicators");
+      let currentIndex = 0;
+
+      function updateCarousel(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        indicators
+          .querySelectorAll(".indicator-button")
+          .forEach((button, i) => {
+            button.classList.toggle("active", i === index);
+          });
+      }
+
+      slides.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "indicator-button";
+        dot.setAttribute("aria-label", `Show photo ${index + 1}`);
+        dot.addEventListener("click", () => {
+          currentIndex = index;
+          updateCarousel(index);
+        });
+        indicators.appendChild(dot);
+      });
+
+      prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel(currentIndex);
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel(currentIndex);
+      });
+
+      updateCarousel(currentIndex);
+    </script>
+  </body>
+</html>
