@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuart Card | Portfolio</title>
+    <!-- Custom minimalist premium CSS -->
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dynamic-background">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <span class="logo">SC.</span>
+            <div class="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#resume" class="nav-item">Resume</a>
+                <a href="index.html" class="nav-item return-btn">Back to Scratch</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Hero Section -->
+        <header id="about" class="hero-section reveal-on-load">
+            <h1 class="hero-title">Stuart Card.</h1>
+            <h2 class="hero-subtitle">Computer Scientist & Lead Frontend Engineer</h2>
+            <p class="hero-description">
+                I’m a CS student at BYU in my junior year. Some of my strengths include a foundation in algorithms, data structures, and team projects. I’m currently looking for a Summer 2026 internship where I can grow as a developer and contribute to a team.
+            </p>
+            <div class="skills-ticker">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">VBA</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">Spanish (Bilingual)</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Attention to Detail</span>
+                <span class="skill-tag">Teamwork & Collaboration</span>
+            </div>
+        </header>
+
+        <!-- Two-column layout for Education and Experience -->
+        <section id="resume" class="split-layout">
+            
+            <!-- Education Column -->
+            <div class="column education-column reveal-scroll">
+                <div class="column-header">
+                    <span class="icon">📘</span>
+                    <h3>Education</h3>
+                </div>
+                <div class="card experience-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <h4>Brigham Young University</h4>
+                        <span class="date">2020 - Present</span>
+                        <p class="degree">College of Computer Science Bachelor’s</p>
+                        
+                        <div class="major-minor">
+                            <div class="mm-item">
+                                <span class="label">Major:</span>
+                                <span class="value">Computer Science</span>
+                            </div>
+                            <div class="mm-item">
+                                <span class="label">Minor:</span>
+                                <span class="value">Mathematics</span>
+                            </div>
+                        </div>
+
+                        <div class="stats-row">
+                            <div class="stat">
+                                <span class="stat-val">Junior</span>
+                                <span class="stat-label">Year</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-val">3.78</span>
+                                <span class="stat-label">GPA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Column -->
+            <div class="column experience-column reveal-scroll delay-1">
+                <div class="column-header">
+                    <span class="icon">💼</span>
+                    <h3>Work Experience</h3>
+                </div>
+                
+                <div class="card experience-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Web Developer</h4>
+                            <span class="date">January 2024 - Present</span>
+                        </div>
+                        <p class="company">BYU Chemistry Department</p>
+                        <p class="description">
+                            Designed and built department web pages using HTML, CSS, Python and a Django framework. Full stack development from creating and managing a Postgres database, developing a complete Django backend, to a frontend consisting of HTML, CSS, and JavaScript. Communicated regularly with department members and my team to ensure accurate content and functionality. Took ownership of projects from planning to deployment in Redhat Openshift. Debugged and optimized code on existing web pages to improve site performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card experience-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Agentic & Prompt Engineering Training</h4>
+                            <span class="date">January 2026 – April 2026</span>
+                        </div>
+                        <p class="company">Technical Training</p>
+                        <p class="description">
+                            Developing understanding and experience in most major areas of agentic and prompt engineering. Learned about and used topics such as single and multi-shot prompts, reducing hallucinations, RAG, tool calling, and MCP. I also built an AI interviewer application using a multi-agent workflow, context management, and in-depth prompt engineering.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card experience-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>Apparel Salesman</h4>
+                            <span class="date">June 2023 – January 2024</span>
+                        </div>
+                        <p class="company">Missionary Mall</p>
+                        <p class="description">
+                            Engaged customers to understand their needs and upsell additional items, contributing to consistent sales growth. Maintained strong product knowledge to offer tailored recommendations and enhance the shopping experience. Managed transactions, restocked inventory, and ensured a clean, organized sales floor.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Stuart Card. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Micro-interaction script for the glow effect on cards -->
+    <script>
+        document.querySelectorAll('.experience-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect(),
+                      x = e.clientX - rect.left,
+                      y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Simple scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-scroll').forEach(el => observer.observe(el));
+        
+        // Add loaded class for instant animations
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

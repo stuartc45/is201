@@ -5,11 +5,11 @@ Act as a World-Class Senior Creative Technologist and Lead Frontend Engineer. Yo
 
 ## Goal
 
-Create three different pages. The first page is the portfolio page. The second page is the scratch page. The third is a web app page.
+Create three different pages. The first page is the portfolio page. The second page is the scratch page. The third is a web app page. All pages should be able to be hosted in Github pages, so nothing should be dependent on a local server.
 
 ### Portfolio Page
 
-The site MUST be professional in appearance. It should include all the information contained in the `Stuart Card - resume.pdf` file. Place the resume information in a way that is easy to read and navigate. Place the education information side by side with the work experience.
+The site MUST be professional in appearance. It should include all the information contained in the resume.md file. Place the resume information in a way that is easy to read and navigate. Place the education information side by side with the work experience.
 
 ### Scratch Page
 
